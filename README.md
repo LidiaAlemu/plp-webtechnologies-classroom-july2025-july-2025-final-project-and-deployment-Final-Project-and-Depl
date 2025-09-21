@@ -1,5 +1,5 @@
 ## 🏥 MediCare Clinic Website
-### By Lidia Alemu
+### By Lidia Daniel Alemu
 
 A modern, responsive website for MediCare Clinic featuring online appointment booking, service information, and contact details.
 
