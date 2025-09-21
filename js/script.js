@@ -181,3 +181,79 @@ if (document.querySelector('.team-section')) {
     window.addEventListener('scroll', animateTeamOnScroll);
     window.addEventListener('load', animateTeamOnScroll);
 }
+
+// Form validation for contact page
+if (document.getElementById("contactForm")) {
+    const contactForm = document.getElementById("contactForm");
+    
+    contactForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        // Get form fields
+        const contactName = document.getElementById("contactName");
+        const contactEmail = document.getElementById("contactEmail");
+        const contactSubject = document.getElementById("contactSubject");
+        const contactMessage = document.getElementById("contactMessage");
+        
+        let isValid = true;
+        
+        // Validate name
+        if (contactName.value.trim() === "") {
+            showError(contactName, "Name is required");
+            isValid = false;
+        } else {
+            showSuccess(contactName);
+        }
+        
+        // Validate email
+        if (contactEmail.value.trim() === "") {
+            showError(contactEmail, "Email is required");
+            isValid = false;
+        } else if (!isValidEmail(contactEmail.value)) {
+            showError(contactEmail, "Please enter a valid email");
+            isValid = false;
+        } else {
+            showSuccess(contactEmail);
+        }
+        
+        // Validate subject
+        if (contactSubject.value.trim() === "") {
+            showError(contactSubject, "Subject is required");
+            isValid = false;
+        } else {
+            showSuccess(contactSubject);
+        }
+        
+        // Validate message
+        if (contactMessage.value.trim() === "") {
+            showError(contactMessage, "Message is required");
+            isValid = false;
+        } else {
+            showSuccess(contactMessage);
+        }
+        
+        if (isValid) {
+            // In a real application, you would send the form data to a server here
+            alert("Message sent successfully! We'll get back to you soon.");
+            contactForm.reset();
+        }
+    });
+    
+    function showError(input, message) {
+        const formGroup = input.parentElement;
+        formGroup.classList.add("error");
+        
+        const errorMessage = formGroup.querySelector(".error-message");
+        errorMessage.textContent = message;
+    }
+    
+    function showSuccess(input) {
+        const formGroup = input.parentElement;
+        formGroup.classList.remove("error");
+    }
+    
+    function isValidEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+}
