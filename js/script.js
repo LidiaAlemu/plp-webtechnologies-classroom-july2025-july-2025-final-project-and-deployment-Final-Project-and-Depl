@@ -153,3 +153,31 @@ if (document.getElementById("bookingForm")) {
         return re.test(phone.replace(/[\s\-\(\)]/g, ''));
     }
 }
+
+// Animation on scroll for team members
+function animateTeamOnScroll() {
+    const teamMembers = document.querySelectorAll('.team-member');
+    
+    teamMembers.forEach(member => {
+        const position = member.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (position < screenPosition) {
+            member.style.opacity = 1;
+            member.style.transform = 'translateY(0)';
+        }
+    });
+}
+
+// Initialize team members with hidden state
+document.querySelectorAll('.team-member').forEach(member => {
+    member.style.opacity = 0;
+    member.style.transform = 'translateY(20px)';
+    member.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+});
+
+// Listen for scroll events on about page
+if (document.querySelector('.team-section')) {
+    window.addEventListener('scroll', animateTeamOnScroll);
+    window.addEventListener('load', animateTeamOnScroll);
+}
