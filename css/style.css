@@ -488,3 +488,14 @@ footer {
     color: #7f8c8d;
     margin-bottom: 0.5rem;
 }
+
+/* Responsive adjustments for about page */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        order: -1;
+    }
+}
