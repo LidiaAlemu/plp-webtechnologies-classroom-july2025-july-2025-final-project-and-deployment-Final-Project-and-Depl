@@ -553,3 +553,22 @@ footer {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
+/* Responsive adjustments for contact page */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-info {
+        order: 2;
+    }
+    
+    .contact-form {
+        order: 1;
+    }
+    
+    .map-container div {
+        height: 300px;
+    }
+}
