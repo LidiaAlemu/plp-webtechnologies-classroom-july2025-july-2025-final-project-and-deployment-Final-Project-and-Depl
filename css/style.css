@@ -406,3 +406,35 @@ footer {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
+
+/* About Content */
+.about-content {
+    padding: 3rem 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    color: #2c3e50;
+    margin: 1.5rem 0 1rem;
+}
+
+.about-text ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.about-text li {
+    margin-bottom: 0.5rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
