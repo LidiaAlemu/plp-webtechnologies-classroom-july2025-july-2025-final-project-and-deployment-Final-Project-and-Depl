@@ -29,14 +29,23 @@ plp-webtechnologies-classroom-july2025-july-2025-final-project-and-deployment-Fi
 
 
 ├── index.html # Home page with services & testimonials
+|
 ├── booking.html # Appointment booking form
+|
 ├── about.html # About clinic and team
+|
 ├── contact.html # Contact information and form
+|
 ├── css/
+|
 │ └── style.css # Complete styling
+|
 ├── js/
+|
 │ └── script.js # All JavaScript functionality
+|
 ├── images/ # Website images and assets
+|
 └── README.md # Project documentation
 
 
