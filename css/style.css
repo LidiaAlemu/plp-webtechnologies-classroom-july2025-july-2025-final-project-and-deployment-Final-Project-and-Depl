@@ -324,3 +324,72 @@ footer {
     font-size: 2.5rem;
     margin-bottom: 1rem;
 }
+
+/* Booking Form */
+.booking-form-section {
+    padding: 3rem 0;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.booking-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2a7de1;
+}
+
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+    border-color: #e74c3c;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    display: none;
+}
+
+.form-group.error .error-message {
+    display: block;
+}
+
+.booking-form button {
+    justify-self: start;
+    margin-top: 1rem;
+}
