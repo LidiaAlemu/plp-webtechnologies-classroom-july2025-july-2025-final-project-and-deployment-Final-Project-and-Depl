@@ -311,3 +311,16 @@ footer {
         flex-direction: column;
     }
 }
+
+/* Booking Hero */
+.booking-hero {
+    background-color: #2a7de1;
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.booking-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
