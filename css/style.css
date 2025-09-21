@@ -316,7 +316,7 @@ footer {
 .booking-hero {
     background-color: #2a7de1;
     color: #fff;
-    padding: 3rem 0;
+    padding: 10rem 0;
     text-align: center;
 }
 
@@ -398,7 +398,7 @@ footer {
 .page-hero {
     background-color: #2a7de1;
     color: #fff;
-    padding: 3rem 0;
+    padding: 10rem 0;
     text-align: center;
 }
 
@@ -498,4 +498,58 @@ footer {
     .about-image {
         order: -1;
     }
+}
+
+/* Contact Content */
+.contact-content {
+    padding: 3rem 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.contact-info h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    margin-bottom: 2rem;
+}
+
+.contact-item h3 {
+    color: #2a7de1;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.contact-form h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Map Section */
+.map-section {
+    margin-top: 3rem;
+}
+
+.map-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
